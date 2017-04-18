@@ -11,7 +11,7 @@ $(function(){
      .then(function(response) {
       temp = response.main.temp;
       var currentFarenheit = newTemperature.convertKelvinToF(temp);
-      $('.showFarenheit').text("The current temperature in " + city + " is " + currentFarenheit + " F");
+      $('.showFarenheit').text("The current temperature in " + city + " is " + currentFarenheit + " F.  You can expect " + response.weather[0].description + ".");
       var currentCelsius = newTemperature.convertKelvinToC(temp);
       $('.showCelsius').text("The current temperature in " + city + " is " + currentCelsius + " C");
     })
@@ -24,5 +24,3 @@ $(function(){
     });
   });
 });
-
-// 64044f63a6a9124d7e6f4c56730e15cf
