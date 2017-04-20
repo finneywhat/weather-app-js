@@ -1,5 +1,6 @@
 .jumbotron, .forecast h2 {
   text-align: center;
+  margin-bottom: 30px;
 }
 
 #location {
@@ -11,7 +12,19 @@
 }
 
 img {
-  width: 100px;
+  width: 50px;
   display: block;
   margin: auto;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.btn-primary {
+  display: block;
+}
+
+.thumbnail {
+  box-shadow: 0px 4px 7px black;
 }

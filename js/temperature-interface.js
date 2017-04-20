@@ -7,12 +7,15 @@ $(function(){
     var temp;
     var newTemperature = new Temperature();
     var city;
+    var date = new Date();
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
     $.get('http://api.openweathermap.org/data/2.5/forecast/daily?zip=' + zip + '&appid=' + apiKey)
      .then(function(response) {
       temp = response.list[0].temp.day;
       city = response.city.name;
       var currentFarenheit = newTemperature.convertKelvinToF(temp);
-      $('.showFarenheit').text("The current temperature in " + city + " is " + currentFarenheit + " F.  You can expect.");
+      $('.showFarenheit').text("Today is " + days[date.getDay()] + ". The current temperature in " + city + " is " + currentFarenheit + "*F.");
     })
 
     .fail(function(error) {
