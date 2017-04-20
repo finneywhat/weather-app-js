@@ -1,43 +1,96 @@
 <html>
   <head>
     <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <title>Weather</title>
   </head>
   <body>
+    <div class="jumbotron">
+      <div class="container-fluid">
+        <h1>Weather Access</h1>
+        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</h4>
+      </div>
+    </div>
     <div class="container">
-      <h1>Get Weather Conditions From Anywhere!</h1>
-      <label for="location">Enter a location:</label>
-      <input id="location" type="text">
-      <button class="btn btn-success" id="weather-location">Get Current Temperature!</button>
+      <div class="form-group">
+        <label for="location">Enter Zip Code</label>
+        <input class="form-control" id="location" type="text" required placeholder="22192">
+      </div>
+      <button class="btn btn-success" id="weather-location">Current Conditions</button>
       <br>
-      <div class="showWeather"></div>
       <hr>
       <div class="showFarenheit"></div>
       <hr>
-      <div class="showCelsius"></div>
     </div>
-    <hr>
-
-    <div class="container">
+    <div class="container-fluid forecast">
+      <h2>Five-Day Forecast</h2>
       <div class="row">
         <div class="col-md-2 col-md-offset-1">
-          <span id="dayOne"></span>
+          <div class="thumbnail">
+            <div class="icons" id="img1">
+
+            </div>
+            <div class="caption">
+              <h5 id="box1"></h5>
+              <p class="five-day-blocks" id="day1"></p>
+              <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+            </div>
+          </div>
         </div>
         <div class="col-md-2">
-          <span id="dayTwo"></span>
+          <div class="thumbnail">
+            <div class="icons" id="img2">
+
+            </div>
+            <div class="caption">
+              <h5 id="box2"></h5>
+              <p class="five-day-blocks" id="day2"></p>
+              <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+            </div>
+          </div>
         </div>
         <div class="col-md-2">
-          <span id="dayThree"></span>
+          <div class="thumbnail">
+            <div class="icons" id="img3">
+
+            </div>
+            <div class="caption">
+              <h5 id="box3"></h5>
+              <p class="five-day-blocks" id="day3"></p>
+              <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+            </div>
+          </div>
         </div>
         <div class="col-md-2">
-          <span id="dayFour"></span>
+          <div class="thumbnail">
+            <div class="icons" id="img4">
+
+            </div>
+            <div class="caption">
+              <h5 id="box4"></h5>
+              <p class="five-day-blocks" id="day4"></p>
+              <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+            </div>
+          </div>
         </div>
         <div class="col-md-2">
-          <span id="dayFive"></span>
+          <div class="thumbnail">
+            <div class="icons" id="img5">
+
+            </div>
+            <div class="caption">
+              <h5 id="box5"></h5>
+              <p class="five-day-blocks" id="day5"></p>
+              <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+    <div id="error">
+
     </div>
   </body>
 </html>
