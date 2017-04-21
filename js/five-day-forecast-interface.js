@@ -8,6 +8,7 @@ $(function(){
     var newForecast = new Forecast();
     var city;
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
     $('.alert').hide();
     $.get('http://api.openweathermap.org/data/2.5/forecast/daily?zip=' + zip + '&appid=' + apiKey + '&cnt=5')
@@ -23,7 +24,7 @@ $(function(){
         var maxFarenheit = newForecast.convertKelvinToF(maxTemp);
         $('#img'+(i+1)).empty().append('<img src=http://openweathermap.org/img/w/' + icon + '.png><hr class="no-margin">');
         $('#day'+(i+1)).empty().append("High - " + maxFarenheit + "°F <br>Low - " + minFarenheit + "*F");
-        $('#box'+(i+1)).text(days[epoch.getDay()] + " " + epoch.getDate());
+        $('#box'+(i+1)).text(days[epoch.getDay()] + " " + months[epoch.getMonth()] + " " + epoch.getDate());
       }
       $('.forecast').show();
     })

@@ -2,8 +2,15 @@ $blue : #83D2F6;
 $purple : #a95873;
 
 .thumbnail {
-  background-color: $purple;
+  background: #20002c;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #cbb4d4, #20002c);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #cbb4d4, #20002c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-radius: 0;
+  border-color: #20002c;
+}
+
+.thumbnail:hover {
+  box-shadow: 0 4px 10px black;
 }
 
 .thumbnail .caption {
@@ -12,6 +19,7 @@ $purple : #a95873;
 
 .alert {
   display: none;
+  margin-top: 2%;
 }
 
 .btn {
@@ -21,7 +29,7 @@ $purple : #a95873;
 
 .jumbotron {
   border-bottom: 5px solid black;
-  height: 200px;
+  height: 500px;
   background-image: url('http://kidsahead.com/system/ka_heros/5/original/Thunderstorms.jpg?1362156266');
   background-size: cover;
   background-position: bottom;
@@ -32,8 +40,32 @@ $purple : #a95873;
   margin-bottom: 30px;
 }
 
+.jumbotron h1 {
+  margin-top: 20%;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 7em;
+  text-shadow: 0 5px 10px black;
+}
+
+.jumbotron h4 {
+  font-family: 'Roboto';
+  font-weight: 200;
+  text-shadow: 0 5px 10px black;
+}
+
+.button-group {
+  text-align: center;
+}
+
+label {
+  display: block;
+  text-align: center;
+}
+
 .showFarenheit {
   display: none;
+  padding: 10% 0;
 }
 
 .center-text {
@@ -68,8 +100,17 @@ $purple : #a95873;
   margin-bottom: 30px;
 }
 
+.forecast h2 {
+  margin-bottom: 5%;
+}
+
 #location {
   width: 25%;
+  margin-left: 37.4%;
+  margin-bottom: 1%;
+  padding: .5%;
+  border-radius: 4px;
+  border: 1px solid $purple;
 }
 
 .forecast {

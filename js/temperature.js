@@ -15,4 +15,12 @@ Temperature.prototype.degreeToCardinalDirection = function(deg) {
   return arr[(val % 16)];
 };
 
+Temperature.prototype.twelveHourTime = function(time) {
+  if (time >= 13) {
+    return time - 12;
+  } else {
+    return time;
+  }
+}
+
 exports.temperatureModule = Temperature;
